@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "256045455930",
+    "project_id": "appsynergies-43fa0",
+    "storage_bucket": "appsynergies-43fa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256045455930:android:326d02085525ab658c7303",
+        "android_client_info": {
+          "package_name": "com.abhishek.appsynergies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256045455930-5qi3dq2hh5sfmq5e634k09j00r8dtskn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abhishek.appsynergies",
+            "certificate_hash": "ebf573cce432efea3a49cf3effb8183616924076"
+          }
+        },
+        {
+          "client_id": "256045455930-b58c08c438dad90106t8veerb73kemlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL_sciO4k0U7zOL-X6YyzEVM_W9AX4jiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256045455930-b58c08c438dad90106t8veerb73kemlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
