@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'file:///E:/GGATE/rnd/appsynergies/lib/auth/login/loginProvider.dart';
 import 'package:appsynergies/auth/register/registerProvider.dart';
 import 'package:appsynergies/screen/dashboard/DashBoard.dart';
 import 'package:appsynergies/screen/dashboard/dashBoardProvider.dart';
