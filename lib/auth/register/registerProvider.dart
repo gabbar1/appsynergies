@@ -39,12 +39,9 @@ class RegisterProvider extends ChangeNotifier{
   Future<void> facebookLogin({BuildContext context}) async{
 
     try {
-      onLoading(context: context,strMessage: "Loading");
       final AccessToken result = await FacebookAuth.instance.login();
       final FacebookAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(result.token);
-      await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential).whenComplete(() async{
-        Navigator.pop(context);
-      });
+      await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
 
       print("-----------------login-------------------");
       Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>
