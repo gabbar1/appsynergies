@@ -15,7 +15,9 @@ class RegisterProvider extends ChangeNotifier{
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: email,
           password: password
-      );
+      ).whenComplete(() async{
+        Navigator.pop(context);
+      });
       Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>
           DashBoard()), (Route<dynamic> route) => false);
       FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser.uid).set(
@@ -41,8 +43,7 @@ class RegisterProvider extends ChangeNotifier{
       final AccessToken result = await FacebookAuth.instance.login();
       final FacebookAuthCredential facebookAuthCredential = FacebookAuthProvider.credential(result.token);
       await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential).whenComplete(() async{
-
-
+        Navigator.pop(context);
       });
 
       print("-----------------login-------------------");
@@ -70,10 +71,7 @@ class RegisterProvider extends ChangeNotifier{
           email: email,
           password: password
       ).whenComplete(() async{
-        if(FirebaseAuth.instance.authStateChanges().isEmpty != null) {
-
-
-        }
+        Navigator.pop(context);
       });
       await FirebaseMessaging.instance.subscribeToTopic('fcm_test');
       Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>
