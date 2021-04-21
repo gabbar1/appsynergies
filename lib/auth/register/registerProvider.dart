@@ -57,7 +57,8 @@ class RegisterProvider extends ChangeNotifier{
       Navigator.pop(context);
       alert(context: context,msg: e.message);
     } catch (e) {
-      print(e);
+      alert(context: context,msg: e.message);
+
     }
 
 }

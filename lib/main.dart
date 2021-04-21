@@ -100,6 +100,7 @@ class _MyAppState extends State<MyApp> {
     });
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print("--------------listen");
       RemoteNotification notification = message.notification;
       AndroidNotification android = message.notification?.android;
       if (notification != null && android != null) {
@@ -117,6 +118,8 @@ class _MyAppState extends State<MyApp> {
                 icon: 'launch_background',
               ),
             ));
+      } else{
+       print( android.channelId);
       }
     });
 

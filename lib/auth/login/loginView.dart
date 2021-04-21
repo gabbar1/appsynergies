@@ -7,8 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import 'loginProvider.dart';
-
 class LoginView extends StatefulWidget {
   @override
   _LoginViewState createState() => _LoginViewState();
